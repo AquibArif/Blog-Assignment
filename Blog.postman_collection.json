@@ -1,0 +1,326 @@
+{
+	"info": {
+		"_postman_id": "ace4de99-e6a8-90b3-099c-b078d9e7933b",
+		"name": "Blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "blog create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 76ee6550294bcd54cbcba8a0b1b570347af68fef",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"blog_name\":\"rohit first blog\",\n\t\"text\":\"content of rohits first blog\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/blog/create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"blog",
+						"create",
+						""
+					]
+				},
+				"description": "http://127.0.0.1:8000/blog/create"
+			},
+			"response": []
+		},
+		{
+			"name": "user login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Rohit\",\n    \"password\":\"password123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/blog/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"blog",
+						"login",
+						""
+					]
+				},
+				"description": "http://127.0.0.1:8000/blog/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "blog details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/blog/details/all/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"blog",
+						"details",
+						"all",
+						""
+					]
+				},
+				"description": "http://127.0.0.1:8000/blog/details/1"
+			},
+			"response": []
+		},
+		{
+			"name": "blog delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 947db25c7c48a6980b935bc693894c51f811415b",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/blog/delete/4/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"blog",
+						"delete",
+						"4",
+						""
+					]
+				},
+				"description": "http://127.0.0.1:8000/blog/delete/4/"
+			},
+			"response": []
+		},
+		{
+			"name": "blog update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 98566c58b438be93123df514db69033434a1c148",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"blog_id\":6,\n    \"text\":\"Hi welcome to my first blog\",\n    \"blog_name\":\"My first blog\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/blog/update/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"blog",
+						"update",
+						""
+					]
+				},
+				"description": "http://127.0.0.1:8000/blog/update/"
+			},
+			"response": []
+		},
+		{
+			"name": "blog comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 76ee6550294bcd54cbcba8a0b1b570347af68fef",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\":\"my first comment\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/blog/comment/6/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"blog",
+						"comment",
+						"6",
+						""
+					]
+				},
+				"description": "http://127.0.0.1:8000/blog/comment/6/"
+			},
+			"response": []
+		},
+		{
+			"name": "blog like",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/blog/like/6/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"blog",
+						"like",
+						"6",
+						""
+					]
+				},
+				"description": "http://127.0.0.1:8000/blog/like/6/"
+			},
+			"response": []
+		},
+		{
+			"name": "blog report",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token \t947db25c7c48a6980b935bc693894c51f811415b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"reason\":\"unethical\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/blog/report/6/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"blog",
+						"report",
+						"6",
+						""
+					]
+				},
+				"description": "http://127.0.0.1:8000/blog/report/6/"
+			},
+			"response": []
+		},
+		{
+			"name": "blog user signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Rohit\",\n    \"email\": \"rohit@gmail.com\",\n    \"password\": \"password123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/blog/signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"blog",
+						"signup",
+						""
+					]
+				},
+				"description": "http://127.0.0.1:8000/blog/signup/"
+			},
+			"response": []
+		}
+	]
+}
